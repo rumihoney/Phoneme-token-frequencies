@@ -1,29 +1,46 @@
-Phoneme Zipf Analysis (CMUdict)
+# Phoneme Zipf Analysis (CMUdict)
 
 This project analyzes phoneme frequencies in CMUdict to test whether they follow a Zipf-like distribution.
 
-What's included:
-- phonemic_frequencies.py → main script that loads CMUdict, processes phonemes, and runs the analysis
-- zipf_quick_report → function that counts and ranks phoneme frequencies
-- zipf_plot_simple → function that plots frequency vs rank
+## Features
 
-How results were obtained:
-- CMUdict entries were loaded using NLTK
-- Stress markers were removed (e.g., AH0 → AH)
-- All phoneme tokens were collected into a single list
-- Frequencies were counted and ranked
-- A Zipf-style plot (rank vs frequency) was generated
+- Loads the CMU Pronouncing Dictionary from NLTK
+- Removes lexical stress markers (e.g., `AH0` → `AH`)
+- Counts phoneme token frequencies
+- Ranks phonemes by frequency
+- Generates a Zipf-style frequency vs. rank plot
 
-Results:
-- 39 phoneme types
-- 853,918 total tokens
-- Frequency decreases rapidly with rank, showing a Zipf-like pattern
+## Project Structure
 
-Top phonemes:
-- AH → 71410
-- N  → 60564
-- S  → 50427
-- IH → 50093
-- L  → 49479
+- **phonemic_frequencies.py** — Main script that loads CMUdict and performs the analysis
+- **zipf_quick_report()** — Counts and ranks phoneme frequencies
+- **zipf_plot_simple()** — Generates a frequency vs. rank plot
+
+## Results
+
+| Metric | Value |
+|--------|------:|
+| Types | 39 |
+| Tokens | 853,918 |
+
+### Top 15 Most Frequent Phonemes
+
+| Rank | ARPAbet | IPA | Example | Frequency |
+|----:|:-------:|:---:|:--------|---------:|
+| 1 | AH | /ʌ/ | *buck* | 71,410 |
+| 2 | N | /n/ | *bun, sun* | 60,564 |
+| 3 | S | /s/ | *bus, sun* | 50,427 |
+| 4 | IH | /ɪ/ | *bit, sit* | 50,093 |
+| 5 | L | /l/ | *bull, sill* | 49,479 |
+| 6 | T | /t/ | *but, sit* | 48,549 |
+| 7 | R | /r/ | *burr, sir* | 46,046 |
+| 8 | K | /k/ | *buck, sick* | 42,502 |
+| 9 | IY | /iː/ | *bee, see* | 34,504 |
+| 10 | D | /d/ | *bud, sid* | 32,389 |
+| 11 | M | /m/ | *bum, sum* | 29,347 |
+| 12 | ER | /ɝ/ | *bird, serve* | 29,027 |
+| 13 | Z | /z/ | *buzz, size* | 27,842 |
+| 14 | EH | /ɛ/ | *bet, set* | 27,398 |
+| 15 | AA | /ɑ/ | *bob, saw* | 24,546 |
 
 
