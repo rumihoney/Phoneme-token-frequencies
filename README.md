@@ -18,12 +18,10 @@ This project analyzes phoneme frequencies in CMUdict to test whether they follow
 
 ## Results
 
-### CMUdict Phoneme Token Frequencies (Stress Stripped)
-
 | Metric | Value |
 |--------|------:|
-| Phoneme Types | 39 |
-| Phoneme Tokens | 853,918 |
+| Types | 39 |
+| Tokens | 853,918 |
 
 ### Top 15 Most Frequent Phonemes
 
