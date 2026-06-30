@@ -6,6 +6,9 @@ import re
 from nltk.corpus import cmudict
 from nltk import FreqDist
 
+# If CMUdict isn't already downloaded in runtime, uncomment:
+# nltk.download("cmudict")
+
 # Function to print a quick Zipf-style report of item frequencies
 def zipf_quick_report(items, title="", topn=15, min_count=1):
     fd = FreqDist(items)
@@ -30,9 +33,6 @@ def zipf_plot_simple(ranked, n=30, title="Phoneme frequency by rank"):
     plt.grid(True)
     plt.tight_layout()
     plt.show()
-
-# If CMUdict isn't already downloaded in runtime, uncomment:
-# nltk.download("cmudict")
 
 # 1) Load CMUdict entries: (word, pronunciation_list)
 entries = cmudict.entries()
