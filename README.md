@@ -1,6 +1,6 @@
 # Phoneme Zipf Analysis (CMUdict)
 
-This project analyzes phoneme frequencies in CMUdict to test whether they follow a Zipf-like distribution.
+Hackathon project for LING 498 (Computational Linguistics) using Python and NLTK to analyze CMUdict phoneme frequencies and investigate Zipf-like distributions.
 
 ## Features
 
